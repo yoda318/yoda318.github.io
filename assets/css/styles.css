@@ -3,7 +3,39 @@ body {
     font-family: 'Noto Sans JP', sans-serif;
     padding-top: 70px
 }
-
+.accordion {
+  margin: 2em 0;
+}
+.accordion__summary {
+  display: block;
+  background: #b2e5ff; /* 見出しの背景色 */
+  font-weight: bold;
+  position: relative;
+  list-style: none; /* 矢印を消す */
+  cursor: pointer;
+  padding: 10px 38px 10px 10px;
+}
+.accordion__summary::-webkit-details-marker {
+  display: none;
+}
+.accordion__summary::after {
+  content: "+";
+  font-size: 1.4em; /* 記号のサイズ */
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.accordionアコーディオンにtitleを入力してください .accordion__summary::after {
+  content: "−";
+}
+.accordion__detail {
+  padding: 4px 10px;
+  margin: 10px 0;
+}
+.accordion__text {
+  margin: 0;
+}
 .menu-icon {
     font-size: 1.25rem
 }
